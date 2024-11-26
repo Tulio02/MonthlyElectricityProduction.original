@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lógica de Programação</title>
+    <link rel="icon" type="image/png" href="logoeletrica.png">
+    <style>
+        @media (max-width: 768px) {
+            .image-gallery {
+                grid-template-columns: repeat(2, 1fr); /* 2 colunas em telas menores */
+            }}
+        body {
+            font-family: Arial, sans-serif;
+            padding: 30px;
+            margin: 30px;
+            background-color: #e1e3ed;
+            border: 10px solid black;
+        }
+        h1 {
+            font-family: 'Times New Roman', Times, serif;
+            text-align: center;
+            color: black;
+        }
+        
+        .header {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-bottom: 20px;
+            background-color: #e9ecef;
+            border: 2px solid black
+        }
+        .header p {
+            margin: 5px 0;
+            font-size: 14px;
+
+        }
+        .image-container {
+            border: 1px solid #ccc;
+            background-color: white;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+            border: 2px solid black;
+        }
+        .image-container img {
+            margin-bottom: 10px;
+        }
+        .image-info {
+            font-size: 12px;
+            color: #555;
+            text-align: center;
+            margin-top: -10px;
+        }
+        footer {
+            text-align: center;
+            font-size: 12px;
+            color: #777;
+            margin-top: 20px;
+        }
+        footer img {
+            width: 55px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <!-- Título Principal -->
+    <h1>Lógica De Programação</h1>
+
+    <!-- Cabeçalho -->
+    <div class="header">
+        <p><strong>Universidade Federal Do Tocantins Campus Palmas</strong></p>
+        <p><strong>Nome dos Alunos:</strong> Túlio Ribeiro Furtado, Mateus Santos Da Silva, Vinicius Andrade De Melo, Victor Alexandro Sousa Guimarães.</p>
+        <p><strong>Professor:</strong> Alex Vilarindo Menezes</p>
+        <p><strong>Curso:</strong> Engenharia Elétrica</p>
+    </div>
+
+    <div>
+        <p><h1>Produção Mensal De Eletricidade em Gw/h</h1></p>
+        <p><h3>Objetivo Geral do Trabalho:</h3></p>
+        <p>Apresentar uma análise de dados sobre A Produção Mensal De Eletricidade em Gw/h</p>
+        <p><h3>Ademais:</h3></p>
+        
+        <div style="margin: 30px;">
+            <p>
+                <p style="line-height: 1.2; text-indent: 30px">
+                    Os dados foram coletados do site da Agência Internacional de Energia (AIE), 
+                    especificamente da ferramenta Estatísticas Mensais de Eletricidade disponível em 
+                    <a href="https://www.iea.org/data-and-statistics/data-tools/monthly-electricity-statistics" target="_blank">
+                        iaa.org/data-and-statistics/data-tools/monthly-electricity-statistics
+                    </a>.<br>
+                </p>
+                    
+                <p style="line-height: 1.2; text-indent: 30px">
+                    Se você estiver interessado em como os dados foram coletados, você pode verificar:
+                    <a href="https://github.com/ccan23/iea_electricity_generation_data_scraper" target="_blank">
+                    (github.
+                    com/ccan
+                    23/iea
+                    _
+                    electricity
+                    _
+                    generation
+                    _
+                    data
+                    _scraper)
+                    </a>.<br>
+                </p>
+                
+                <p style="line-height: 1.2; text-indent: 30px">
+                    Os dados incluem informações sobre a produção de energia em vários países 
+                    mensalmente de 2010 a 2022. A produção de energia é medida em gigawatts-hora 
+                    (GWh) e cobre uma gama de produtos de energia, incluindo hidrelétrica, eólica, 
+                    solar, geotérmica, nuclear, combustíveis fósseis e outros.<br>
+                </p>
+
+                <p style="line-height: 1.2; text-indent: 30px">
+                    <b>Países:</b> Argentina, Austrália, Áustria, Bélgica, Brasil, Bulgária, Canadá, 
+                    Chile, Colômbia, Costa Rica, Croácia, Chipre, República Tcheca, Dinamarca, Estônia,
+                    Finlândia, França, Alemanha, Grécia, Hungria, Total IEA, Islândia, Índia, Irlanda,
+                    Itália, Japão, Coreia, Letônia, Lituânia, Luxemburgo, Malta, México, Holanda, Nova Zelândia,
+                    Macedônia do Norte, Noruega, OCDE Américas, OCDE Ásia Oceania, OCDE Europa, Total OCDE, 
+                    República Popular da China, Polônia, Portugal, República da Turquia, Romênia, Sérvia, República Eslovaca,
+                    Eslovênia, Espanha, Suécia, Suíça, Reino Unido, Estados Unidos.<br>
+                </p>
+
+                <p style="line-height: 1.2; text-indent: 30px">
+                    <b>Produtos:</b> Hidráulica, Eólica, Solar, Geotérmica, Outras energias renováveis, Nuclear,
+                    Total de combustíveis, Carvão, Petróleo, Gás natural, Energias renováveis ​​combustíveis, Outras 
+                    energias não renováveis ​​combustíveis, Não especificado, Produção líquida de eletricidade, Total 
+                    de importações, Total de exportações, Eletricidade fornecida, Usada para armazenamento bombeado, 
+                    Perdas de distribuição, Consumo final, Comércio de eletricidade, Renováveis, Não renováveis, Outros, 
+                    Outras renováveis ​​agregadas, Baixo carbono, Combustíveis fósseis.<br>
+                </p>
+                    <p style="line-height: 1.2; text-indent: 30px">
+                        <b>As colunas do conjunto de dados incluem:</b>
+                        <ul>
+                            <li><b>COUNTRY:</b> Nome do país.</li>
+                            <li><b>CODE_TIME:</b> Um código que representa o mês e o ano (por exemplo, JAN2010 para janeiro de 2010).</li>
+                            <li><b>TIME:</b> O mês e o ano em um formato mais legível (por exemplo, janeiro de 2010).</li>
+                            <li><b>YEAR:</b> O ano do ponto de dados.</li>
+                            <li><b>MONTH:</b> O mês do ponto de dados como um número (1-12).</li>
+                            <li><b>MONTH_NAME:</b>O mês do ponto de dados como uma sequência (por exemplo, January).</li>
+                            <li><b>PRODUCT:</b>  O tipo de produto energético (por exemplo, Hydroelectric, Wind, Solar).</li>
+                            <li><b>VALUE:</b> A quantidade de eletricidade gerada em gigawatts-hora (GWh).</li>
+                            <li><b>DISPLAY_ORDER:</b> A ordem em que os produtos devem ser exibidos.</li>
+                            <li><b>YEARTODATE:</b> A quantidade de eletricidade gerada para o ano atual até o mês atual em GWh.</li>
+                            <li><b>PREVIOUSYEARTODATE:</b> A quantidade de eletricidade gerada no ano anterior até o mês atual em GWh.</li>
+                            <li><b>SHARE:</b> A participação do produto na geração total de eletricidade do país em formato decimal.</li>
+                        </ul>
+                    </p>
+            </p>
+        </div>
+    </div> 
+
+
+    <!-- Parte dos Graficos -->
+<div>
+        <p>
+            <h3  style="line-height: 1.2; text-indent: 30px">Analise:</h3>
+        </p>
+
+
+    <div class="image-container"> <!--Pasta 01-->
+
+        <h1>Comparação entre os 10 Produtores de Energia Renováveis e Não Renováveis:</h1>
+        
+        <h3 style=" margin-top: -10px;">Código da Sumarização e Criação do Gráfico de Fontes Renováveis:</h3>
+        <img src="analise/01/codigoenergiasrenovaveis.png" alt="Código" style="max-width: 105%; margin-top: -10px;">
+        <p class="image-info">Criado em: 11/11/2024 | Aplicativo: Visual Studio</p>
+        
+        <h3>Terminal de Fontes Renováveis:</h3>
+        <img src="analise/01/terminalrenovaveis.png" alt="Terminal" style="max-width: 105%; margin-top: -10px;">
+        <p class="image-info">Criado em: 11/11/2024 | Aplicativo: Visual Studio</p>
+
+        <h3>Código da Sumarização e Criação do Gráfico de Energias Não Renováveis:</h3>
+        <img src="analise/01/codigoenergiasnaorenovaveis.png" alt="Código" style="max-width: 105%; margin-top: -10px;">
+        <p class="image-info">Criado em: 11/11/2024 | Aplicativo: Visual Studio</p>
+
+        <h3>Terminal de Energias Não Renováveis:</h3>
+        <img src="analise/01/terminalnaorenovaveis.png" alt="Terminal" style="max-width: 105%; margin-top: -10px;">
+        <p class="image-info">Criado em: 11/11/2024 | Aplicativo: Visual Studio</p>
+
+        <h3>Gráficos:</h3>
+        <img src="analise/01/grafico01.png" alt="Gráfico" style="max-width: 100%; margin-top: -10px;">
+        <p class="image-info">Criado em: 11/11/2024 | Aplicativo: Visual Studio</p>
+        <p style=" margin-top: -10px; text-align: justify; text-indent: 30px;">
+            <b>Explicação:</b> Foi observado que havia conglomerados, ou seja, organizações que constituíam vários países,
+            assim se tornando a maior produtora de energia. Portanto, para resolver essa situação realizamos uma sumarização
+            no qual vamos eliminar esses valores dispersos (OECD Américas, OECD Asia Oceania, OECD Europe, OECD Total, IEA Total),
+            para obtermos os 10 países mais produtores de energias renováveis e não renováveis. <br>
+        </p>
+
+    </div>
+    
+    <div class="image-container"> <!--Pasta 02-->
+
+        <h1>Top 10 Países dos Maiores Produtores em Relação a Produção Líquida de Eletricidade:</h1>
+        
+        <h3 style=" margin-top: -10px;">Código para sumarização dos dados e produção do gráfico:</h3>
+        <img src="analise/02/codigo01.png" alt="Código" style="max-width: 105%; margin-top: -10px;">
+        <img src="analise/02/codigo02.png" alt="Código" style="max-width: 105%; margin-top: -10px;">
+        <p class="image-info">Criado em: 11/11/2024 | Aplicativo: Visual Studio</p>
+        
+        <h3>Terminal:</h3>
+        <img src="analise/02/terminal01.png" alt="Terminal01" style="max-width: 105%; margin-top: -10px;">
+        <img src="analise/02/terminal02.png" alt="Terminal01" style="max-width: 105%; margin-top: -10px;">
+        <p class="image-info">Criado em: 11/11/2024 | Aplicativo: Visual Studio</p>
+
+        <h3>Gráfico:</h3>
+        <img src="analise/02/grafico02.png" alt="Gráfico" style="max-width: 100%; margin-top: -10px;">
+        <p class="image-info">Criado em: 11/11/2024 | Aplicativo: Visual Studio</p>
+        <p style=" margin-top: -10px; text-align: justify; text-indent: 30px;">
+            <b>Explicação:</b> Fizemos o Top 10 para selecionar o maior produtor em relação a produção líquida 
+            de eletricidade, no qual vamos selecionar o Top 1 deste ranking e analisarmos a sua produção ao longo dos anos. <br>
+        </p>
+
+    </div>
+
+    <div class="image-container"> <!--Pasta 03-->
+
+        <h1>Produção Líquida de Eletricidade dos Estados Unidos (EUA) de 2010 a 2022:</h1>
+        
+        <h3 style=" margin-top: -10px;">Código para sumarização dos dados e produção do gráfico:</h3>
+        <img src="analise/03/codigo01.png" alt="Código" style="max-width: 105%; margin-top: -10px;">
+        <p class="image-info">Criado em: 11/11/2024 | Aplicativo: Visual Studio</p>
+        
+        <h3>Terminal:</h3>
+        <img src="analise/03/terminal01.png" alt="Terminal" style="max-width: 105%; margin-top: -10px;">
+        <p class="image-info">Criado em: 11/11/2024 | Aplicativo: Visual Studio</p>
+
+        <h3>Gráfico:</h3>
+        <img src="analise/03/grafico01.png" alt="Gráfico" style="max-width: 100%; margin-top: -10px;">
+        <p class="image-info">Criado em: 11/11/2024 | Aplicativo: Visual Studio</p>
+        <p style=" margin-top: -10px; text-align: justify; text-indent: 30px;">
+        <b>Explicação:</b> A produção líquida de eletricidade e a quantidade de produção bruta 
+        de eletricidade menos a quantidade de eletricidade consumida pelas usinas de energia, 
+        as usinas consomem eletricidade para uso próprio. Analisamos o top 1 dos maiores produtores 
+        líquidos de eletricidade e observamos o seu comportamento em relação aos 12 anos de produção, 
+        com isso vamos calcular calcular a média, o desvio da produção líquida e o coeficiente de 
+        variação do top 1 em relação a 2010 a 2022. 
+        </p>
+
+    </div>
+
+    <div class="image-container"> <!--Pasta 04-->
+
+        <h1>Análise Amostral da Produção Líquida Referente aos Estados Unidos (EUA) de Eletricidade entre 2020 e 2022:</h1>
+        
+        <h3 style=" margin-top: -10px;">Código de sumarização dos dados e produção do gráfico:</h3>
+        <img src="analise/04/codigo01.png" alt="Código" style="max-width: 105%; margin-top: -10px;">
+        <img src="analise/04/codigo02.png" alt="Código" style="max-width: 105%; margin-top: -10px;">
+        <img src="analise/04/codigo03.png" alt="Código" style="max-width: 105%; margin-top: -10px;">
+        <img src="analise/04/codigo04.png" alt="Código" style="max-width: 105%; margin-top: -10px;">
+        <p class="image-info">Criado em: 11/11/2024 | Aplicativo: Visual Studio</p>
+        
+        <h3>Terminal:</h3>
+        <img src="analise/04/terminal01.png" alt="Terminal" style="max-width: 105%; margin-top: -10px;">
+        <img src="analise/04/terminal02.png" alt="Terminal" style="max-width: 105%; margin-top: -10px;">
+        <img src="analise/04/terminal03.png" alt="Terminal" style="max-width: 105%; margin-top: -10px;">
+        <img src="analise/04/terminal04.png" alt="Terminal" style="max-width: 105%; margin-top: -10px;">
+        <p class="image-info">Criado em: 11/11/2024 | Aplicativo: Visual Studio</p>
+
+        <h3>Gráficos:</h3>
+        <img src="analise/04/grafico01.png" alt="Gráfico" style="max-width: 100%; margin-top: -10px;">
+        <p class="image-info">Criado em: 11/11/2024 | Aplicativo: Visual Studio</p>
+        <p style=" margin-top: -10px; text-align: justify; text-indent: 30px;">
+            <b>Explicação:</b> Esse tópico analisa uma amostra de 2020 e 2022, no qual foi os anos 
+            que ocorreram a pandemia do COVID-19 com o intuito de compreender como uma pandemia afeta 
+            a produção de energia elétrica da maior potência mundial.<br>
+        </p>
+
+    </div>
+
+    <div class="image-container"> <!--Pasta 05-->
+
+        <h1>Top 5 Fontes Energeticas Mais Utilizadas Globalmanete:</h1>
+        
+        <h3 style=" margin-top: -10px;">Código para a sumarização dos dados e produção do gráfico:</h3>
+        <img src="analise/05/codigo01.png" style="max-width: 105%; margin-top: -10px;">
+        <img src="analise/05/codigo02.png" alt="Terminal" style="max-width: 105%; margin-top: -10px;">
+        <p class="image-info">Criado em: 11/11/2024 | Aplicativo: Visual Studio</p>
+        
+        <h3>Terminal:</h3>
+        <img src="analise/05/terminal01.png" alt="Terminal" style="max-width: 105%; margin-top: -10px;">
+        <p class="image-info">Criado em: 11/11/2024 | Aplicativo: Visual Studio</p>
+        <h3>Gráfico:</h3>
+        <img src="analise/05/grafico.png" alt="Gráfico" style="max-width: 100%; margin-top: -10px;">
+        <p class="image-info">Criado em: 11/11/2024 | Aplicativo: Visual Studio</p>
+        <p style=" margin-top: -10px; text-align: justify; text-indent: 30px;">
+            <b>Explicação:</b> Fizemos um código utilizando todos os produtos do DataFrame 
+            e emitimos um gráfico que tem o objetivo de exibir os 5 produtos mais utilizados 
+            entre os países. Após a exibição do gráfico fizemos uma sumarização em relação aos
+            produtos, separando uma amostra que leva em consideração os produtos isoladamente 
+            (fontes que não pertencem a um grupo ou produtos que não se referem à produção de energia).
+            <br>
+        </p>
+
+    </div>
+
+    <div class="image-container"> <!--Pasta 06-->
+
+        <h1>Análise dos Estados Unidos (EUA) de Consumo em Relação aos Anos de 2010 - 2012</h1>
+        <h3 style=" margin-top: -10px;">Código para a sumarização dos dados e produção do gráfico:</h3>
+        <img src="analise/06/codigo01.png" style="max-width: 105%; margin-top: -10px;">
+        <p class="image-info">Criado em: 11/11/2024 | Aplicativo: Visual Studio</p>
+        
+        <h3>Terminal:</h3>
+        <img src="analise/06/terminal01.png" alt="Terminal" style="max-width: 105%; margin-top: -10px;">
+        <p class="image-info">Criado em: 11/11/2024 | Aplicativo: Visual Studio</p>
+
+        <h3>Gráfico:</h3>
+        <img src="analise/06/grafico.png" alt="Gráfico" style="max-width: 100%; margin-top: -10px;">
+        <p class="image-info">Criado em: 11/11/2024 | Aplicativo: Visual Studio</p>
+        <p style=" margin-top: -10px; text-align: justify; text-indent: 30px;">
+           <b>Explicação:</b> Pegamos o dados de consumo total entre os meses de janeiro 
+           e dezembro em relação aos anos de 2010 a 2012.<br>
+        </p>
+
+    </div>
+
+</div>
+
+    <footer>
+        Contatos:<br>
+        tulio.furtado@mail.uft.edu.br<br>
+        victor.alexandro@mail.uft.edu.br<br>
+        vinicius.andrade1@mail.uft.edu.br<br>
+        santos.mateus@mail.uft.edu.br<br>
+        <p>Página criada para a apresentação de gráficos<br>
+        Universidade Federal Do Tocantins Campus Palmas<br>
+        <img src="logouft.png" alt="Logo UFT"><img src="logoeletrica.png" alt="Logo Elétrica"></p>
+    </footer>
+</body>
+</html>
